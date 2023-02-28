@@ -1,16 +1,26 @@
 import React from 'react'
-import Meme from './memesData'
+import memesData from './memesData'
 
-export default function meme() {
+/**
+ * Challenge: Save the random meme URL in state
+ * - Create new state called `memeImage` with an
+ *   empty string as default
+ * - When the getMemeImage function is called, update
+ *   the `memeImage` state to be the random chosen
+ *   image URL
+ * - Below the div.form, add an <img /> and set the
+ *   src to the new `memeImage` state you created
+ */
 
-    let url
+export default function Meme() {
 
-    let getUrl = () => {
-        const memeArray = Meme.data.memes
+    const [memeImage, setMemeImage] = React.useState("")
+
+    const getMemeImage = () => {
+        const memeArray = memesData.data.memes
         const randomArray = Math.floor(Math.random() * memeArray.length)
-        url = memeArray[randomArray].url
+        setMemeImage(memeArray[randomArray].url)
 
-        console.log(url)
     }
 
     return (
@@ -34,18 +44,13 @@ export default function meme() {
                     className='form--button'
                     type="button"
                     value="Get a new meme image 🖼"
-                    onClick={getUrl}
+                    onClick={getMemeImage}
                 />
             </div>
-            <h1>{url}</h1>
+            <div className='box'>
+                <img src={memeImage} alt="meme-image" />
+            </div>
+            {/* <h1>{memeImage}</h1> */}
         </main>
     )
 }
-
-/**
- * Challenge: Get a random image from the `memesData` array
- * when the "new meme image" button is clicked.
- * 
- * Log the URL of the image to the console. (Don't worry
- * about displaying the image yet)
- */

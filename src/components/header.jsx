@@ -1,7 +1,7 @@
 import React from 'react'
 import trollFace from '../img/troll-face.svg'
 
-export default function nav() {
+export default function Nav() {
     return (
         <header className='header'>
             <img src={trollFace} className="header--img" alt="trol-face" />

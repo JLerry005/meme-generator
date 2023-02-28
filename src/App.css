@@ -43,6 +43,9 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  /* max-width: 40rem;
+  margin-inline: auto; */
 }
 
 .form--inputs {
@@ -88,6 +91,16 @@ h1 {
   color: black;
 }
 
-.meme-img {
-  width: 100%;
+.box {
+  margin-top: 1rem;
+  max-width: 40rem;
+  margin-inline: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box img {
+  max-width: 100%;
 }
