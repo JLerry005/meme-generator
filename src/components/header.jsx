@@ -6,7 +6,7 @@ export default function Nav() {
         <header className='header'>
             <img src={trollFace} className="header--img" alt="trol-face" />
             <h2 className='header--title'>Meme Generator</h2>
-            <p className='header--project'>React Course - Project 3</p>
+            <p className='header--project'>JXL PROJECTS</p>
         </header>
     )
 
